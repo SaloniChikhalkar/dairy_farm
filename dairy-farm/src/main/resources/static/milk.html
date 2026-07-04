@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Milk Collection</title>
+
+<link rel="stylesheet" href="../css/milk.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Milk Collection Management</h1>
+
+<form id="milkForm">
+
+<input type="hidden" id="milkId">
+
+<div class="row">
+
+<div class="input-group">
+<label>Select Animal</label>
+
+<select id="animal">
+<option value="">Select Animal</option>
+</select>
+
+</div>
+
+<div class="input-group">
+<label>Collection Date</label>
+<input type="date" id="collectionDate">
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Morning Quantity (L)</label>
+<input type="number" id="morningQty" step="0.01">
+</div>
+
+<div class="input-group">
+<label>Evening Quantity (L)</label>
+<input type="number" id="eveningQty" step="0.01">
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Total Quantity</label>
+<input type="number" id="totalQty" readonly>
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button type="button" id="saveBtn" onclick="saveMilk()">
+Save
+</button>
+
+<button type="reset" onclick="clearForm()">
+Clear
+</button>
+
+</div>
+
+</form>
+
+<hr>
+
+<h2>Milk Records</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Animal</th>
+<th>Date</th>
+<th>Morning</th>
+<th>Evening</th>
+<th>Total</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="milkTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="../js/milk.js"></script>
+
+</body>
+</html>

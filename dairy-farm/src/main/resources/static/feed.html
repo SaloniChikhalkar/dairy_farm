@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Feed Management</title>
+
+<link rel="stylesheet" href="../css/feed.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Feed Management</h1>
+
+<form id="feedForm">
+
+<input type="hidden" id="feedId">
+
+<div class="row">
+
+<div class="input-group">
+<label>Feed Name</label>
+<input type="text" id="feedName" required>
+</div>
+
+<div class="input-group">
+<label>Feed Type</label>
+<select id="feedType">
+<option>Green Fodder</option>
+<option>Dry Fodder</option>
+<option>Concentrate</option>
+<option>Silage</option>
+<option>Mineral Mix</option>
+</select>
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Quantity</label>
+<input type="number" id="quantity">
+</div>
+
+<div class="input-group">
+<label>Unit</label>
+<select id="unit">
+<option>Kg</option>
+<option>Gram</option>
+<option>Bag</option>
+<option>Ton</option>
+</select>
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Purchase Price</label>
+<input type="number" id="purchasePrice">
+</div>
+
+<div class="input-group">
+<label>Supplier</label>
+<input type="text" id="supplier">
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Purchase Date</label>
+<input type="date" id="purchaseDate">
+</div>
+
+<div class="input-group">
+<label>Expiry Date</label>
+<input type="date" id="expiryDate">
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Status</label>
+<select id="status">
+<option>Available</option>
+<option>Out of Stock</option>
+</select>
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button type="button" id="saveBtn" onclick="saveFeed()">Save</button>
+
+<button type="reset" onclick="clearForm()">Clear</button>
+
+</div>
+
+</form>
+
+<hr>
+
+<h2>Feed List</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Type</th>
+<th>Quantity</th>
+<th>Unit</th>
+<th>Price</th>
+<th>Supplier</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="feedTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="../js/feed.js"></script>
+
+</body>
+</html>

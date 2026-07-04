@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animal Management</title>
+
+<link rel="stylesheet" href="css/animal.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Animal Management</h1>
+
+<form id="animalForm">
+
+<input type="hidden" id="animalId">
+
+<div class="row">
+<label>Tag Number</label>
+<input type="text" id="tagNumber" required>
+</div>
+
+<div class="row">
+<label>Animal Type</label>
+<select id="animalType">
+<option value="">Select</option>
+<option>Cow</option>
+<option>Buffalo</option>
+<option>Goat</option>
+</select>
+</div>
+
+<div class="row">
+<label>Breed</label>
+<input type="text" id="breed">
+</div>
+
+<div class="row">
+<label>Gender</label>
+<select id="gender">
+<option>Male</option>
+<option>Female</option>
+</select>
+</div>
+
+<div class="row">
+<label>Birth Date</label>
+<input type="date" id="birthDate">
+</div>
+
+<div class="row">
+<label>Purchase Date</label>
+<input type="date" id="purchaseDate">
+</div>
+
+<div class="row">
+<label>Purchase Price</label>
+<input type="number" id="purchasePrice">
+</div>
+
+<div class="row">
+<label>Weight (Kg)</label>
+<input type="number" id="weight">
+</div>
+
+<div class="row">
+<label>Health Status</label>
+<input type="text" id="healthStatus">
+</div>
+
+<div class="row">
+<label>Status</label>
+<select id="status">
+<option>Active</option>
+<option>Sold</option>
+<option>Dead</option>
+</select>
+</div>
+
+<div class="buttons">
+<button type="button" id="saveBtn" onclick="saveAnimal()">
+    Save Animal
+</button>
+
+<button type="reset" onclick="clearForm()">
+    Clear
+</button>
+</div>
+
+</form>
+
+<hr>
+
+<h2>Animal List</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Tag</th>
+<th>Type</th>
+<th>Breed</th>
+<th>Gender</th>
+<th>Weight</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="animalTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/animal.js"></script>
+
+</body>
+</html>

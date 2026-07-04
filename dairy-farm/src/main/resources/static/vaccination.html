@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vaccination Management</title>
+
+<link rel="stylesheet" href="../css/vaccination.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Vaccination Management</h1>
+
+<form id="vaccinationForm">
+
+<input type="hidden" id="vaccinationId">
+
+<div class="row">
+
+<div class="input-group">
+<label>Animal</label>
+<select id="animal">
+<option value="">Select Animal</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Vaccine Name</label>
+<input type="text" id="vaccineName">
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Vaccination Date</label>
+<input type="date" id="vaccinationDate">
+</div>
+
+<div class="input-group">
+<label>Next Due Date</label>
+<input type="date" id="nextDueDate">
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Veterinarian</label>
+<input type="text" id="veterinarian">
+</div>
+
+<div class="input-group">
+<label>Remarks</label>
+<input type="text" id="remarks">
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button type="button" id="saveBtn" onclick="saveVaccination()">Save</button>
+
+<button type="reset" onclick="clearForm()">Clear</button>
+
+</div>
+
+</form>
+
+<hr>
+
+<h2>Vaccination Records</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Animal</th>
+<th>Vaccine</th>
+<th>Vaccination Date</th>
+<th>Next Due</th>
+<th>Veterinarian</th>
+<th>Remarks</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="vaccinationTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="../js/vaccination.js"></script>
+
+</body>
+</html>
