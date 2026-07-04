@@ -1,0 +1,378 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef3f8;
+    padding:30px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+
+    width:95%;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+/* =========================
+   TITLE
+========================= */
+
+h1{
+
+    text-align:center;
+    color:#198754;
+    margin-bottom:25px;
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:1px;
+
+}
+
+/* =========================
+   SEARCH SECTION
+========================= */
+
+.search-section{
+
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+
+}
+
+.search-section input{
+
+    flex:1;
+    min-width:250px;
+
+}
+
+/* =========================
+   FORM
+========================= */
+
+.row{
+
+    display:flex;
+    gap:25px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+
+}
+
+.form-group{
+
+    flex:1;
+    min-width:260px;
+
+}
+
+label{
+
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#444;
+
+}
+
+input,
+select{
+
+    width:100%;
+    padding:12px 15px;
+    border:1px solid #d6d6d6;
+    border-radius:8px;
+    font-size:15px;
+    transition:.3s;
+
+}
+
+input:focus,
+select:focus{
+
+    border-color:#198754;
+    outline:none;
+    box-shadow:0 0 8px rgba(25,135,84,.3);
+
+}
+
+input[readonly]{
+
+    background:#f8f9fa;
+    font-weight:bold;
+    color:#198754;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-group{
+
+    margin-top:10px;
+
+}
+
+button{
+
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+    margin-right:10px;
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+/* Save */
+
+button[type="submit"]{
+
+    background:#198754;
+
+}
+
+/* Clear */
+
+button[type="reset"]{
+
+    background:#6c757d;
+
+}
+
+/* Search */
+
+.search-section button:first-of-type{
+
+    background:#0d6efd;
+
+}
+
+/* Clear Search */
+
+.search-section button:last-of-type{
+
+    background:#dc3545;
+
+}
+
+/* Export Buttons */
+
+.export-buttons{
+
+    margin:20px 0;
+
+}
+
+.export-buttons button:first-child{
+
+    background:#20c997;
+
+}
+
+.export-buttons button:last-child{
+
+    background:#fd7e14;
+
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    border-radius:10px;
+    overflow:hidden;
+
+}
+
+thead{
+
+    background:linear-gradient(to right,#198754,#28a745);
+    color:#fff;
+
+}
+
+thead th{
+
+    padding:15px;
+    text-align:center;
+    font-size:15px;
+
+}
+
+tbody td{
+
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#f8f9fa;
+
+}
+
+tbody tr:hover{
+
+    background:#d4edda;
+    transition:.3s;
+
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.edit{
+
+    background:#ffc107;
+    color:#000;
+    padding:8px 15px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.edit:hover{
+
+    background:#e0a800;
+
+}
+
+.delete{
+
+    background:#dc3545;
+    color:#fff;
+    padding:8px 15px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+
+}
+
+.delete:hover{
+
+    background:#bb2d3b;
+
+}
+
+/* =========================
+   HORIZONTAL LINE
+========================= */
+
+hr{
+
+    margin:25px 0;
+    border:none;
+    height:1px;
+    background:#ddd;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+.row{
+
+    flex-direction:column;
+
+}
+
+.search-section{
+
+    flex-direction:column;
+
+}
+
+button{
+
+    width:100%;
+    margin-bottom:10px;
+
+}
+
+.export-buttons button{
+
+    width:100%;
+    margin-bottom:10px;
+
+}
+
+table{
+
+    font-size:13px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.container{
+
+    padding:15px;
+
+}
+
+h1{
+
+    font-size:24px;
+
+}
+
+input,
+select{
+
+    padding:10px;
+
+}
+
+thead th,
+tbody td{
+
+    padding:10px;
+    font-size:12px;
+
+}
+
+}

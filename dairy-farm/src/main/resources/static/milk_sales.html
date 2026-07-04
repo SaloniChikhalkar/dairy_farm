@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Milk Sales Management</title>
+
+<link rel="stylesheet" href="/css/milk_sales.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Milk Sales Management</h1>
+
+<!-- ================= Search Section ================= -->
+
+<div class="search-section">
+
+<input type="text"
+id="searchCustomer"
+placeholder="Search Customer">
+
+<input type="date"
+id="searchDate">
+
+<button onclick="searchCustomer()">
+Search
+</button>
+
+<button onclick="clearSearch()">
+Clear
+</button>
+
+</div>
+
+<hr>
+
+<!-- ================= Form ================= -->
+
+<form id="saleForm">
+
+<input type="hidden" id="saleId">
+
+<div class="row">
+
+<div class="form-group">
+
+<label>Customer</label>
+
+<select id="customer" required>
+
+<option value="">Select Customer</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Sale Date</label>
+
+<input type="date"
+id="saleDate"
+required>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label>Quantity (Liters)</label>
+
+<input type="number"
+id="quantity"
+step="0.01"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Price Per Liter</label>
+
+<input type="number"
+id="price"
+step="0.01"
+required>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label>Total Amount</label>
+
+<input type="number"
+id="total"
+readonly>
+
+</div>
+
+<div class="form-group">
+
+<label>Payment Status</label>
+
+<select id="payment">
+
+<option value="Paid">Paid</option>
+
+<option value="Pending">Pending</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="button-group">
+
+<button type="submit">
+Save
+</button>
+
+<button type="reset" onclick="clearForm()">
+Clear
+</button>
+
+</div>
+
+</form>
+
+<hr>
+
+<!-- ================= Export Buttons ================= -->
+
+<div class="export-buttons">
+
+<button onclick="exportExcel()">
+Export Excel
+</button>
+
+<button onclick="exportPDF()">
+Export PDF
+</button>
+
+</div>
+
+<hr>
+
+<!-- ================= Table ================= -->
+
+<table id="salesTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Customer</th>
+
+<th>Sale Date</th>
+
+<th>Quantity</th>
+
+<th>Price/Liter</th>
+
+<th>Total Amount</th>
+
+<th>Payment</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="saleTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="/js/milk_sales.js"></script>
+
+</body>
+
+</html>
