@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expense Management</title>
+
+<link rel="stylesheet" href="/css/expense.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Expense Management</h1>
+
+<!-- Search Section -->
+
+<div class="search-section">
+
+<input
+type="text"
+id="searchCategory"
+placeholder="Search Category">
+
+<input
+type="date"
+id="searchDate">
+
+<button onclick="searchExpense()">
+Search
+</button>
+
+<button onclick="clearSearch()">
+Clear
+</button>
+
+</div>
+
+<hr>
+
+<!-- Expense Form -->
+
+<form id="expenseForm">
+
+<input type="hidden" id="expenseId">
+
+<div class="row">
+
+<div class="form-group">
+
+<label>Expense Date</label>
+
+<input
+type="date"
+id="expenseDate"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Category</label>
+
+<select id="category" required>
+
+<option value="">Select Category</option>
+
+<option>Feed Purchase</option>
+
+<option>Medicine</option>
+
+<option>Employee Salary</option>
+
+<option>Electricity Bill</option>
+
+<option>Water Bill</option>
+
+<option>Transport</option>
+
+<option>Maintenance</option>
+
+<option>Equipment</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label>Description</label>
+
+<input
+type="text"
+id="description"
+placeholder="Enter Description">
+
+</div>
+
+<div class="form-group">
+
+<label>Amount (₹)</label>
+
+<input
+type="number"
+id="amount"
+step="0.01"
+placeholder="Enter Amount"
+required>
+
+</div>
+
+</div>
+
+<div class="button-group">
+
+<button type="submit">
+Save Expense
+</button>
+
+<button
+type="reset"
+onclick="clearForm()">
+Clear
+</button>
+
+</div>
+
+</form>
+
+<hr>
+
+<div class="export-buttons">
+
+<button onclick="exportExcel()">
+Export Excel
+</button>
+
+<button onclick="exportPDF()">
+Export PDF
+</button>
+
+</div>
+
+<hr>
+
+<table id="expenseTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Date</th>
+
+<th>Category</th>
+
+<th>Description</th>
+
+<th>Amount (₹)</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="expenseBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="/js/expense.js"></script>
+
+</body>
+
+</html>
